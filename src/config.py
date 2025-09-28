@@ -11,3 +11,4 @@ LIFTS = {
 
 RAW_PATH = "./data/raw/"
 CLEAN_PATH = "./data/clean/"
+LOGS_PATH = "./logs/"

@@ -1,5 +1,6 @@
-from config import (CLEAN_PATH, COMPETITIONS_NAMES)
+from .config import *
 
+import io
 import os
 
 import numpy as np
@@ -26,3 +27,12 @@ def load_tables():
             print("Incorrect clean table path:", table_path)
 
     return competitions_results
+
+
+def log_dfs(dfs: dict, file_name: str):
+    with open(os.path.join(LOGS_PATH, f"{file_name}.log"), "w", encoding="utf-8") as log:
+        for name, df in dfs.items():
+            buf = io.StringIO()
+            df.info(buf=buf)
+            info_str = buf.getvalue()
+            log.write(f"{name}:\n{info_str}\n")

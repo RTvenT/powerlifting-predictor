@@ -1,5 +1,4 @@
-from config import (RAW_PATH, CLEAN_PATH,
-                    COMPETITIONS_NAMES)
+from .config import *
 
 import os
 import glob
@@ -18,8 +17,8 @@ def clean(table):
 
         for row in ws.iter_rows(min_row=2):
             for cell in row:
-                if cell.column_letter not in ['A', 'B']:
-                    if cell.font.strike or (isinstance(cell.value, str) and '.' not in cell.value):
+                if cell.column_letter != 'B':
+                    if cell.font.strike or (isinstance(cell.value, str) and '.' not in cell.value) or cell.value =='—':
                         cell.value = None
 
     wb.save(os.path.join(CLEAN_PATH, table_name))
