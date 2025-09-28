@@ -35,3 +35,11 @@ def clean_all_tables():
             clean(table)
         else:
             print("Incorrect raw table path:", table)
+
+
+def main():
+    clean_all_tables()
+
+
+if __name__ == "__main__":
+    main()

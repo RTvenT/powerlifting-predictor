@@ -1,7 +1,7 @@
 FISU:
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 120 entries, 0 to 119
-Data columns (total 17 columns):
+Data columns (total 18 columns):
  #   Column         Non-Null Count  Dtype  
 ---  ------         --------------  -----  
  0   Rnk            120 non-null    Int64  
@@ -21,13 +21,14 @@ Data columns (total 17 columns):
  14  Total          120 non-null    float64
  15  IPF GL         120 non-null    float64
  16  Pts            120 non-null    Int64  
-dtypes: Int64(2), float64(13), int32(1), object(1)
-memory usage: 15.8+ KB
+ 17  Age            120 non-null    int32  
+dtypes: Int64(2), float64(13), int32(2), object(1)
+memory usage: 16.3+ KB
 
 Juniors:
 <class 'pandas.core.frame.DataFrame'>
 Index: 253 entries, 0 to 15
-Data columns (total 17 columns):
+Data columns (total 18 columns):
  #   Column         Non-Null Count  Dtype  
 ---  ------         --------------  -----  
  0   Rnk            250 non-null    Int64  
@@ -47,13 +48,14 @@ Data columns (total 17 columns):
  14  Total          250 non-null    float64
  15  IPF GL         250 non-null    float64
  16  Pts            253 non-null    Int64  
-dtypes: Int64(2), float64(13), int32(1), object(1)
-memory usage: 35.1+ KB
+ 17  Age            253 non-null    int32  
+dtypes: Int64(2), float64(13), int32(2), object(1)
+memory usage: 36.1+ KB
 
 Masters:
 <class 'pandas.core.frame.DataFrame'>
 Index: 153 entries, 0 to 102
-Data columns (total 17 columns):
+Data columns (total 18 columns):
  #   Column         Non-Null Count  Dtype  
 ---  ------         --------------  -----  
  0   Rnk            150 non-null    Int64  
@@ -73,13 +75,14 @@ Data columns (total 17 columns):
  14  Total          148 non-null    float64
  15  IPF GL         150 non-null    float64
  16  Pts            150 non-null    Int64  
-dtypes: Int64(2), float64(13), int32(1), object(1)
-memory usage: 21.2+ KB
+ 17  Age            153 non-null    int32  
+dtypes: Int64(2), float64(13), int32(2), object(1)
+memory usage: 21.8+ KB
 
 Open:
 <class 'pandas.core.frame.DataFrame'>
 Index: 182 entries, 0 to 126
-Data columns (total 17 columns):
+Data columns (total 18 columns):
  #   Column         Non-Null Count  Dtype  
 ---  ------         --------------  -----  
  0   Rnk            178 non-null    Int64  
@@ -99,6 +102,7 @@ Data columns (total 17 columns):
  14  Total          178 non-null    float64
  15  IPF GL         178 non-null    float64
  16  Pts            178 non-null    Int64  
-dtypes: Int64(2), float64(13), int32(1), object(1)
-memory usage: 25.2+ KB
+ 17  Age            182 non-null    int32  
+dtypes: Int64(2), float64(13), int32(2), object(1)
+memory usage: 25.9+ KB
 
