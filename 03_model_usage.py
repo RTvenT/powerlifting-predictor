@@ -1,4 +1,5 @@
 from src.config import *
+from src.utils import load_models
 
 import os
 
@@ -8,7 +9,15 @@ import pandas as pd
 from joblib import dump, load
 
 
-model = load(os.path.join(MODELS_PATH, "LR_v1.joblib"))
+def get_predictions(models_dir, x):
+    models = load_models(models_dir)
+
+    predictions = dict()
+
+    for model_name, model in models.items():
+        predictions[model_name] = model.predict(x).round(1)[0]
+
+    return predictions
 
 
 age = int(input("Возраст (полных лет): "))
@@ -18,6 +27,10 @@ deadlift = float(input("Становая 1ПМ: "))
 
 person_stats = pd.DataFrame(data=[[age, bwt, squat, deadlift]], columns=['Age', 'Bwt', 'Best Squat', 'Best Deadlift'])
 
-bench_pred = model.predict(person_stats)
+bench_predictions = get_predictions(MODELS_PATH, person_stats)
 
-print("Ваш возможный жим 1ПМ:", bench_pred[0])
+
+print("Ваш возможный максимальный жим по оценкам разных моделей):")
+
+for model_name, predicted_bench in bench_predictions.items():
+    print(f"{model_name}: {predicted_bench}")

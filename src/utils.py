@@ -3,6 +3,8 @@ from .config import *
 import io
 import os
 
+from joblib import load
+
 import numpy as np
 import pandas as pd
 import openpyxl
@@ -36,3 +38,15 @@ def log_dfs(dfs: dict, file_name: str):
             df.info(buf=buf)
             info_str = buf.getvalue()
             log.write(f"{name}:\n{info_str}\n")
+
+
+def load_models(models_dir: str) -> dict:
+    models = {}
+
+    for filename in os.listdir(models_dir):
+        if filename.endswith(".joblib"):
+            model_name = filename.replace(".joblib", "")
+            model_path = os.path.join(models_dir, filename)
+            models[model_name] = load(model_path)
+
+    return models
