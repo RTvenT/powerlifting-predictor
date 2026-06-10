@@ -9,13 +9,13 @@ import pandas as pd
 from joblib import dump, load
 
 
-def get_predictions(models_dir, x):
+def get_predictions(models_dir, features):
     models = load_models(models_dir)
 
     predictions = dict()
 
     for model_name, model in models.items():
-        predictions[model_name] = model.predict(x).round(1)[0]
+        predictions[model_name] = model.predict(features).round(1)[0]
 
     return predictions
 
