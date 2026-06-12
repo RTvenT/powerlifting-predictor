@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bench Predictor</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">Bench<span>.</span>AI</a>
+    <a href="/form" class="nav-link">Predict &rarr;</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-tag">ML Powerlifting-predictor</div>
+    <h1>
+      How much will
+      <span class="accent">you bench?</span>
+    </h1>
+    <p class="hero-sub">
+      Введи свои показатели в приседе и становой — модель предскажет твой максимальный жим лёжа.
+    </p>
+    <a href="/form" class="btn btn-primary">Узнать результат</a>
+  </section>
+
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-value">2</div>
+      <div class="stat-label">модели</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">4</div>
+      <div class="stat-label">параметра</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">&lt;1s</div>
+      <div class="stat-label">время ответа</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Как это <span>работает</span></h2>
+    <div class="section-divider"></div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-number">01</div>
+        <div class="step-title">Введи данные</div>
+        <p class="step-desc">Возраст, вес тела, лучший присед и становая тяга — всё что нужно модели.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">02</div>
+        <div class="step-title">ML-инференс</div>
+        <p class="step-desc">Линейная регрессия и полиномиальная модель обрабатывают данные на сервере.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">03</div>
+        <div class="step-title">Получи предсказание</div>
+        <p class="step-desc">Две модели — два результата. Сравни и оцени свой потенциальный жим.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <h2>Готов узнать свой <span style="color:var(--red)">максимум?</span></h2>
+    <p>Займёт меньше минуты. Никакой регистрации.</p>
+    <a href="/form" class="btn btn-primary">Начать &rarr;</a>
+  </div>
+
+  <footer>
+    <span class="footer-logo">Bench<span>.</span>AI</span>
+    <span class="footer-note">
+      Pet project &mdash; ML Powerlifting-predictor &nbsp;&middot;&nbsp;
+      <a href="https://github.com/RTvenT" target="_blank" rel="noopener" class="footer-author">Andrey Kim</a>
+      <a href="https://github.com/RTvenT" target="_blank" rel="noopener" class="footer-github" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+    </span>
+  </footer>
+
+</body>
+</html>
